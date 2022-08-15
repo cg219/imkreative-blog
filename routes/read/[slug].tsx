@@ -1,11 +1,12 @@
 /** @jsx h */
 import { h } from "preact";
 import { PageProps, Handlers } from "$fresh/server.ts";
-import { HomeLayout } from "../../components/HomeLayout.tsx";
+import { HomeLayout, SettingsProps } from "../../components/HomeLayout.tsx";
 import { PostProps } from "../../components/Post.tsx";
 
 interface GhostData {
   posts: Array<PostProps>;
+  settings: SettingsProps;
 }
 
 const formatter = new Intl.DateTimeFormat('en-US', {
@@ -19,11 +20,12 @@ export const handler: Handlers<GhostData> = {
     const API_URL = Deno.env.get("IMK_API_URL");
     const API_KEY = Deno.env.get("IMK_API_KEY");
     const API_VERSION = "v4";
-    const res = await fetch(
-      `${API_URL}/ghost/api/content/posts/slug/${ctx.params.slug}?key=${API_KEY}&include=tags,authors&limit=1`,
-    );
-    const data = await res.json();
-    return ctx.render(data);
+    const postFetch = await fetch(`${API_URL}/ghost/api/content/posts/slug/${ctx.params.slug}?key=${API_KEY}&include=tags,authors&limit=1`);
+    const postData = await postFetch.json();
+    const settingsFetch = await fetch( `${API_URL}/ghost/api/content/settings/?key=${API_KEY}`);
+    const settingsData = await settingsFetch.json();
+
+    return ctx.render({...postData, ...settingsData});
   },
 };
 
@@ -33,7 +35,7 @@ export default function SinglePost(props: PageProps<GhostData>) {
   const updatedDate = (post.updated_at !== post.published_at) && new Date(post.updated_at!);
 
   return (
-    <HomeLayout title="imkreative">
+    <HomeLayout title="imkreative" nav={props.data.settings.secondary_navigation}>
       <div class="content single-post">
         <h1 class="title">{post.title}</h1>
         <div class="metadata">

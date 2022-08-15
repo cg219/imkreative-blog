@@ -5,7 +5,18 @@ const title = "imkreative";
 
 interface HomeLayoutProps {
   title: string;
-  children: any;
+  children: unknown;
+  nav: Array<NavigationItem>;
+}
+
+interface NavigationItem {
+  label: string;
+  url: string;
+}
+
+export interface SettingsProps {
+  navigation: Array<NavigationItem>;
+  secondary_navigation: Array<NavigationItem>;
 }
 
 export function HomeLayout(props: HomeLayoutProps) {
@@ -40,6 +51,9 @@ export function HomeLayout(props: HomeLayoutProps) {
             <footer>
                 <nav>
                     <div><a href="/"><img class="logo" src="logo.svg" alt="imkreative.com" /></a></div>
+                    <ul>
+                      {props.nav.map((item) => <li><a href={item.url}>{item.label}</a></li>)}
+                    </ul>
                 </nav>
             </footer>
         </main>
