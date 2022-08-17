@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
-import { Handlers, PageProps } from "$fresh/server.ts";
+import { HandlerContext, Handlers, PageProps } from "$fresh/server.ts";
 import { HomeLayout } from "../components/HomeLayout.tsx";
 import { Post } from "../components/Post.tsx";
 import { PostProps, SettingsProps } from "../utils/types.ts";
@@ -12,7 +12,7 @@ interface GhostData {
 }
 
 export const handler: Handlers<GhostData> = {
-  async GET(req, ctx) {
+  async GET(req: Request, ctx: HandlerContext) {
     const API_URL = Deno.env.get("IMK_API_URL");
     const API_KEY = Deno.env.get("IMK_API_KEY");
     const API_VERSION = "v4";
@@ -21,6 +21,7 @@ export const handler: Handlers<GhostData> = {
     const settingsFetch = await fetch( `${API_URL}/ghost/api/content/settings/?key=${API_KEY}`);
     const settingsData = await settingsFetch.json();
 
+    ctx.state.title = settingsData.settings.title;
     hit(req, ctx);
 
     return ctx.render({...postData, ...settingsData});

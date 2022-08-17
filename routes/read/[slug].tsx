@@ -1,8 +1,9 @@
 /** @jsx h */
 import { h } from "preact";
-import { PageProps, Handlers } from "$fresh/server.ts";
+import { PageProps, Handlers, HandlerContext } from "$fresh/server.ts";
 import { HomeLayout } from "../../components/HomeLayout.tsx";
 import { PostProps, SettingsProps } from "../../utils/types.ts";
+import { hit } from "../../utils/pirsch.ts";
 
 interface GhostData {
   posts: Array<PostProps>;
@@ -16,7 +17,7 @@ const formatter = new Intl.DateTimeFormat('en-US', {
 });
 
 export const handler: Handlers<GhostData> = {
-  async GET(req, ctx) {
+  async GET(req: Request, ctx: HandlerContext) {
     const API_URL = Deno.env.get("IMK_API_URL");
     const API_KEY = Deno.env.get("IMK_API_KEY");
     const API_VERSION = "v4";
@@ -24,6 +25,9 @@ export const handler: Handlers<GhostData> = {
     const postData = await postFetch.json();
     const settingsFetch = await fetch( `${API_URL}/ghost/api/content/settings/?key=${API_KEY}`);
     const settingsData = await settingsFetch.json();
+
+    ctx.state.title = `${postData.posts[0].title} | ${settingsData.settings.title}`;
+    hit(req, ctx);
 
     return ctx.render({...postData, ...settingsData});
   },
