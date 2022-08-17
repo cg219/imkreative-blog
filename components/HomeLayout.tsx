@@ -26,6 +26,7 @@ export function HomeLayout(props: HomeLayoutProps) {
         <meta property="twitter:image" content={props.twitterImage || ''} />
         <title>{props.title}</title>
         <base href="/" />
+        <link rel="icon" type="image/png" href="favicon.png" />
         <link rel="canonical" href={props.url || Deno.env.get('IMK_REDIRECT_TO')!} />
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,6 +36,7 @@ export function HomeLayout(props: HomeLayoutProps) {
           href="https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Mukta&display=swap"
           rel="stylesheet"
         />
+
       </head>
 
       <body>
