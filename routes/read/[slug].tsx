@@ -38,8 +38,8 @@ export default function SinglePost(props: PageProps<GhostData>) {
     <HomeLayout title={`${post.title} | ${props.data.settings.title}`}
       nav={props.data.settings.secondary_navigation}
       description={post.excerpt}
-      twitterImage={post.twitter_image}
-      fbImage={post.og_image}
+      twitterImage={post.twitter_image || post.feature_image}
+      fbImage={post.og_image || post.feature_image}
       url={post.canonical_url} >
       <div class="content single-post">
         <h1 class="title">{post.title}</h1>

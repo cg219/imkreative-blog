@@ -34,4 +34,7 @@ export interface PostProps {
   };
   html?: string;
   canonical_url?: string;
+  twitter_image?: string;
+  og_image?: string;
+  feature_image?: string;
 }
