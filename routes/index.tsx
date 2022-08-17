@@ -1,8 +1,9 @@
 /** @jsx h */
 import { h } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { HomeLayout, SettingsProps } from "../components/HomeLayout.tsx";
-import { Post, PostProps } from "../components/Post.tsx";
+import { HomeLayout } from "../components/HomeLayout.tsx";
+import { Post } from "../components/Post.tsx";
+import { PostProps, SettingsProps } from "../utils/types.ts";
 
 interface GhostData {
   posts: Array<PostProps>;
@@ -25,7 +26,12 @@ export const handler: Handlers<GhostData> = {
 
 export default function Home({ data }: PageProps<GhostData>) {
   return (
-    <HomeLayout title="imkreative" nav={data.settings.secondary_navigation}>
+    <HomeLayout title={data.settings.title}
+      nav={data.settings.secondary_navigation}
+      description={data.settings.description}
+      twitterImage={data.settings.twitter_image}
+      fbImage={data.settings.og_image}
+      url={Deno.env.get('IMK_URL')} >
       <div class="content">
         <h1 class="title">blog</h1>
         <div class="posts">

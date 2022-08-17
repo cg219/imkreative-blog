@@ -1,8 +1,8 @@
 /** @jsx h */
 import { h } from "preact";
 import { PageProps, Handlers } from "$fresh/server.ts";
-import { HomeLayout, SettingsProps } from "../../components/HomeLayout.tsx";
-import { PostProps } from "../../components/Post.tsx";
+import { HomeLayout } from "../../components/HomeLayout.tsx";
+import { PostProps, SettingsProps } from "../../utils/types.ts";
 
 interface GhostData {
   posts: Array<PostProps>;
@@ -35,7 +35,12 @@ export default function SinglePost(props: PageProps<GhostData>) {
   const updatedDate = (post.updated_at !== post.published_at) && new Date(post.updated_at!);
 
   return (
-    <HomeLayout title="imkreative" nav={props.data.settings.secondary_navigation}>
+    <HomeLayout title={`${post.title} | ${props.data.settings.title}`}
+      nav={props.data.settings.secondary_navigation}
+      description={post.excerpt}
+      twitterImage={props.data.settings.twitter_image}
+      fbImage={props.data.settings.og_image}
+      url={post.canonical_url} >
       <div class="content single-post">
         <h1 class="title">{post.title}</h1>
         <div class="metadata">

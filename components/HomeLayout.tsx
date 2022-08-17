@@ -1,23 +1,8 @@
 /** @jsx h */
 import { h } from "preact";
+import { HomeLayoutProps, SettingsProps, NavigationItem } from '../utils/types.ts';
 
 const title = "imkreative";
-
-interface HomeLayoutProps {
-  title: string;
-  children: unknown;
-  nav: Array<NavigationItem>;
-}
-
-interface NavigationItem {
-  label: string;
-  url: string;
-}
-
-export interface SettingsProps {
-  navigation: Array<NavigationItem>;
-  secondary_navigation: Array<NavigationItem>;
-}
 
 export function HomeLayout(props: HomeLayoutProps) {
   return (
@@ -28,8 +13,20 @@ export function HomeLayout(props: HomeLayoutProps) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0"
         />
+        <meta name="description" content={props.description || ''} />
+        <meta property="og:url" content={props.url || Deno.env.get('IMK_REDIRECT_TO')!} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={props.title} />
+        <meta property="og:description" content={props.description || ''} />
+        <meta property="og:image" content={props.fbImage || ''} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={props.url || Deno.env.get('IMK_REDIRECT_TO')!} />
+        <meta property="twitter:title" content={props.title} />
+        <meta property="twitter:description" content={props.description || ''} />
+        <meta property="twitter:image" content={props.twitterImage || ''} />
         <title>{props.title}</title>
         <base href="/" />
+        <link rel="canonical" href={props.url || Deno.env.get('IMK_REDIRECT_TO')!} />
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
