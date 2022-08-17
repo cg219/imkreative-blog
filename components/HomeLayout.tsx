@@ -36,7 +36,7 @@ export function HomeLayout(props: HomeLayoutProps) {
           href="https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Mukta&display=swap"
           rel="stylesheet"
         />
-
+        <script async defer data-website-id="3fda1e4b-e49b-45b3-a1f5-03c2b76db998" src="https://umami-production-f96f.up.railway.app/umami.js"></script>
       </head>
 
       <body>
