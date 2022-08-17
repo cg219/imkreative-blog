@@ -1,0 +1,12 @@
+{
+    "settings": {
+        "LSP": {
+            "LSP-Deno": {
+                "enabled": true
+            },
+            "LSP-typescript": {
+                "enabled": false
+            }
+        }
+    }
+}
