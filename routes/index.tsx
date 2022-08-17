@@ -21,7 +21,7 @@ export const handler: Handlers<GhostData> = {
     const settingsFetch = await fetch( `${API_URL}/ghost/api/content/settings/?key=${API_KEY}`);
     const settingsData = await settingsFetch.json();
 
-    hit(req);
+    hit(req, ctx);
 
     return ctx.render({...postData, ...settingsData});
   }
