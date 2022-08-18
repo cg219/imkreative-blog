@@ -12,13 +12,11 @@ export function hit(req: Request, ctx: HandlerContext) {
             ip: (ctx.remoteAddr as Deno.NetAddr).hostname,
             user_agent: req.headers.get('user-agent'),
             accept_language: req.headers.get('accept-language'),
-            referrer: req.headers.get('referer'),
+            referer: req.headers.get('referer'),
             title: ctx.state.title
         })
 
     })
-
-    console.log(req.headers);
 
     fetch(request);
 }
