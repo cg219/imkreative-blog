@@ -18,5 +18,7 @@ export function hit(req: Request, ctx: HandlerContext) {
 
     })
 
+    console.log(req.headers);
+
     fetch(request);
 }
