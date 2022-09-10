@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import { PostProps } from "../utils/types.ts";
 
 const formatter = new Intl.DateTimeFormat('en-US', {

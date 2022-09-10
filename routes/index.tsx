@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import { HandlerContext, Handlers, PageProps } from "$fresh/server.ts";
 import { HomeLayout } from "../components/HomeLayout.tsx";
 import { Post } from "../components/Post.tsx";

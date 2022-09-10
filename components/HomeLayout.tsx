@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import { HomeLayoutProps, SettingsProps, NavigationItem } from '../utils/types.ts';
 
 const title = "imkreative";
