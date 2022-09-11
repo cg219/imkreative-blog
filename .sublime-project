@@ -1,20 +1,17 @@
 {
     "settings": {
         "LSP": {
-            "deno": {
-                "enable": true,
-                "command": ["deno", "llsp"],
+            "Deno": {
+                "enabled": true,
+                "command": ["deno", "lsp"],
                 "initializationOptions": {
                     "enable": true,
                     "lint": true,
-                    "unstable": true
+                    "unstable": false
                 }
             },
             "LSP-typescript": {
-                "enable": false,
-                "initializationOptions": {
-                    "enabled": false
-                }
+                "enabled": false
             }
         }
     }
