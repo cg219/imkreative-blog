@@ -1,4 +1,4 @@
-import { HandlerContext } from "https://deno.land/x/fresh@1.0.2/server.ts";
+import { HandlerContext } from "$fresh/server.ts";
 
 export function hit(req: Request, ctx: HandlerContext) {
     const request = new Request('https://api.pirsch.io/api/v1/hit', {
