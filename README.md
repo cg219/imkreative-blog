@@ -1,4 +1,5 @@
 # imkreative blog
+##### v0.2
 
 ### Usage
 
@@ -11,3 +12,4 @@ deno task start
 ```
 
 This will watch the project directory and restart as necessary.
+
