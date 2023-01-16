@@ -6,12 +6,14 @@ main.imkreative {
     display: grid;
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
     background-color: #FDFDFD;
     grid-template-areas:
         'nav nav nav'
         '. content .'
         'footer footer footer';
     grid-template-columns: 1fr minmax(450px, 50vw) 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-row-gap: 3vw;
 }
 
@@ -36,6 +38,7 @@ main.imkreative header .logo {
 main.imkreative footer {
     padding: 1em;
     grid-area: footer;
+    height: 3em;
 }
 
 main.imkreative footer nav {
