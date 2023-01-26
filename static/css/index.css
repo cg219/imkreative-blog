@@ -234,6 +234,7 @@ main.imkreative footer nav ul li:hover a {
 .single-post .post-data strong {
     font-weight: bold;
     font-size: larger;
+    color: black;
 }
 
 .single-post .post-data em {
@@ -242,6 +243,7 @@ main.imkreative footer nav ul li:hover a {
 
 .single-post .post-data h1, .single-post .post-data h2, .single-post .post-data h3, .single-post .post-data h4, .single-post .post-data h5, .single-post .post-data h6 {
     margin-bottom: 1rem;
+    margin-top: 1.2rem;
     border-bottom: 1px dotted #32323230;
     padding-bottom: .5rem;
 }
@@ -256,6 +258,7 @@ main.imkreative footer nav ul li:hover a {
 
 .single-post .post-data ul li {
     list-style-type: square;
+    margin-bottom: 1rem;
 }
 
 .single-post .post-data ul li ul li {
@@ -297,6 +300,14 @@ main.imkreative footer nav ul li:hover a {
 
 .single-post .post-data h6 {
     font-size: 1.3rem;
+}
+
+.single-post .post-data blockquote {
+    font-size: .95rem;
+    letter-spacing: .03rem;
+    margin: 2rem 1rem;
+    padding-left: 1rem;
+    border-left: .8rem solid var(--green);
 }
 
 @media (max-width: 480px) {
@@ -393,6 +404,7 @@ main.imkreative footer nav ul li:hover a {
 
     .single-post .post-data li {
         margin: .7rem 0;
+        line-height: 1.2;
     }
 
     .single-post .post-data h1 {
@@ -418,4 +430,9 @@ main.imkreative footer nav ul li:hover a {
     .single-post .post-data h6 {
         font-size: 1.1rem;
     }
+
+    .single-post .post-data blockquote {
+        line-height: 1.2;
+    }
+
 }
