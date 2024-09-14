@@ -2,7 +2,6 @@ import { HandlerContext, Handlers, PageProps } from "$fresh/server.ts";
 import { HomeLayout } from "../components/HomeLayout.tsx";
 import { Post } from "../components/Post.tsx";
 import { PostProps, SettingsProps } from "../utils/types.ts";
-import { hit } from "../utils/pirsch.ts";
 
 interface GhostData {
   posts: Array<PostProps>;
@@ -20,7 +19,6 @@ export const handler: Handlers<GhostData> = {
     const settingsData = await settingsFetch.json();
 
     ctx.state.title = settingsData.settings.title;
-    hit(req, ctx);
 
     return ctx.render({...postData, ...settingsData});
   }
