@@ -34,6 +34,7 @@ export function HomeLayout(props: HomeLayoutProps) {
           href="https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Mukta&display=swap"
           rel="stylesheet"
         />
+                <script defer src="https://umi.mente.codes/script.js" data-website-id="730c6c26-d1f9-4e0b-8f78-26c37ce5093e"></script>
       </head>
 
       <body>
