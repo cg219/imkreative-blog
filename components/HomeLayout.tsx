@@ -30,11 +30,13 @@ export function HomeLayout(props: HomeLayoutProps) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/prism.css" />
         <link
           href="https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Mukta&display=swap"
           rel="stylesheet"
         />
                 <script defer src="https://umi.mente.codes/script.js" data-website-id="730c6c26-d1f9-4e0b-8f78-26c37ce5093e"></script>
+                <script defer src="js/prism.js" data-website-id="730c6c26-d1f9-4e0b-8f78-26c37ce5093e"></script>
       </head>
 
       <body>
