@@ -1,5 +1,8 @@
 :root {
     --green: #22707F;
+    --alt: #DD8F80;
+    --dark-font: #252525;
+    --light-font: #DEDEDE;
 }
 
 main.imkreative {
@@ -204,6 +207,7 @@ main.imkreative footer nav ul li:hover a {
     line-height: 1.4;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    color: var(--dark-font)
 }
 
 .single-post .post-data a {
@@ -219,6 +223,10 @@ main.imkreative footer nav ul li:hover a {
     /* background-color: var(--green); */
     padding: 1rem .5rem;
     margin-bottom: .5rem;
+}
+
+.single-post .post-data pre:has(+ figcaption) {
+    margin-bottom: 0;;
 }
 
 .single-post .post-data pre code {
@@ -246,6 +254,7 @@ main.imkreative footer nav ul li:hover a {
     margin-top: 1.6rem;
     border-bottom: 1px dotted #32323230;
     padding-bottom: .5rem;
+    color: var(--green);
 }
 
 .single-post .post-data ul, .single-post .post-data ol {
@@ -300,6 +309,30 @@ main.imkreative footer nav ul li:hover a {
 
 .single-post .post-data h6 {
     font-size: 1.3rem;
+}
+
+.single-post .post-data .kg-callout-card {
+    background: var(--alt);
+    display: flex; 
+    justify-content: flex-start;
+    padding: 2rem 0 2rem .5rem;
+    margin: 1.5rem 0;
+    color: var(--dark-font);
+}
+
+.single-post .post-data .kg-callout-card .kg-callout-emoji {
+    margin-right: 1rem;
+}
+
+.single-post .post-data .kg-code-card figcaption {
+    background: var(--green);
+    padding: .5rem 0 .4rem .5rem;
+}
+
+.single-post .post-data .kg-code-card figcaption p {
+    color: var(--light-font);
+    font-size: .85rem;
+    margin: 0;
 }
 
 .single-post .post-data blockquote {
