@@ -127,7 +127,7 @@ main.imkreative footer nav ul li:hover a {
 }
 
 .post:hover h1 {
-    color: green;
+    color: var(--green);
 }
 
 .post p {
