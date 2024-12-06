@@ -1,0 +1,146 @@
+.single-post .post-data iframe {
+    margin: 1rem 0;
+}
+
+.single-post .post-data p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: var(--dark-font)
+}
+
+.single-post .post-data a {
+    color: var(--green);
+    transition: .2s opacity ease-out;
+}
+
+.single-post .post-data a:hover {
+    opacity: .7;
+}
+
+.single-post .post-data pre {
+    /* background-color: var(--green); */
+    padding: 1rem .5rem;
+    margin-bottom: .5rem;
+}
+
+.single-post .post-data pre:has(+ figcaption) {
+    margin-bottom: 0;
+}
+
+.single-post .post-data pre code {
+    /* color: #DCDCDC; */
+}
+
+.single-post .post-data img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.single-post .post-data strong {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+}
+
+.single-post .post-data em {
+    font-style: italic;
+}
+
+.single-post .post-data h1, .single-post .post-data h2, .single-post .post-data h3, .single-post .post-data h4, .single-post .post-data h5, .single-post .post-data h6 {
+    margin-bottom: 1rem;
+    margin-top: 1.6rem;
+    border-bottom: 1px dotted #32323230;
+    padding-bottom: .5rem;
+    color: var(--green);
+}
+
+.single-post .post-data ul, .single-post .post-data ol {
+    margin: .5rem;
+}
+
+.single-post .post-data ul ul, .single-post .post-data ol ol , .single-post .post-data ul ol , .single-post .post-data ol ul {
+    margin: .5rem 1rem;
+}
+
+.single-post .post-data ul li {
+    list-style-type: square;
+    margin-bottom: 1rem;
+}
+
+.single-post .post-data ul li ul li {
+    list-style-type: circle;
+}
+
+.single-post .post-data ol li {
+    list-style-type: lower-roman;
+}
+
+.single-post .post-data ol li ol li {
+    list-style-type: lower-alpha;
+}
+
+.single-post .post-data li {
+    margin: .5rem 0;
+    list-style-position: inside;
+}
+
+.single-post .post-data h1 {
+    font-size: 2.2rem;
+}
+
+.single-post .post-data h2 {
+    font-size: 2rem;
+}
+
+.single-post .post-data h3 {
+    font-size: 1.8rem;
+}
+
+.single-post .post-data h4 {
+    font-size: 1.6rem;
+}
+
+.single-post .post-data h5 {
+    font-size: 1.4rem;
+}
+
+.single-post .post-data h6 {
+    font-size: 1.3rem;
+}
+
+.single-post .post-data .kg-callout-card {
+    background: var(--alt);
+    display: flex; 
+    justify-content: flex-start;
+    padding: 2rem 0 2rem .5rem;
+    margin: 1.5rem 0;
+    color: var(--dark-font);
+}
+
+.single-post .post-data .kg-callout-card .kg-callout-emoji {
+    margin-right: 1rem;
+}
+
+.single-post .post-data .kg-code-card figcaption {
+    background: var(--green);
+    padding: .5rem 0 .4rem .5rem;
+}
+
+.single-post .post-data .kg-code-card figcaption p {
+    color: var(--light-font);
+    font-size: .85rem;
+    margin: 0;
+}
+
+.single-post .post-data blockquote {
+    font-size: .95rem;
+    letter-spacing: .03rem;
+    margin: 2rem 1rem;
+    padding-left: 1rem;
+    border-left: .8rem solid var(--green);
+}
+
+

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <base href="/" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<link rel="stylesheet" href="%sveltekit.assets%/normalize.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Mukta&display=swap" rel="stylesheet" />
+        <script defer src="https://umi.mente.codes/script.js" data-website-id="730c6c26-d1f9-4e0b-8f78-26c37ce5093e"></script>
+        <link rel="icon" type="image/png" href="favicon.png" />
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+        <main class="imkreative">
+            %sveltekit.body%
+        </main>
+	</body>
+    <style>
+        :root {
+            --green: #22707F;
+            --alt: #DD8F80;
+            --dark-font: #252525;
+            --light-font: #DEDEDE;
+        }
+
+        main.imkreative {
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            min-height: 100vh;
+            background-color: #FDFDFD;
+            grid-template-areas:
+                'nav nav nav'
+                '. content .'
+                'footer footer footer';
+            grid-template-columns: 1fr minmax(450px, 50vw) 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-row-gap: 3vw;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Exo', sans-serif;
+        }
+
+        p {
+            font-family:  'Mukta', sans-serif;
+        }
+    </style>
+</html>
