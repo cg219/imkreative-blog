@@ -143,4 +143,77 @@
     border-left: .8rem solid var(--green);
 }
 
+@media (max-width: 480px) {
+    .single-post.content {
+        display: grid;
+    }
 
+    .single-post .title {
+        font-size: 1.8rem;
+    }
+
+    .single-post .metadata {
+        grid-area: metadata;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        grid-row-gap: .2em;
+    }
+
+    .single-post .post-data p {
+        font-size: 1rem;
+        margin-bottom: .9rem;
+        margin-top: .9rem;
+    }
+
+    .single-post .post-data pre {
+        padding: 1rem .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .single-post .post-data h1, .single-post .post-data h2, .single-post .post-data h3, .single-post .post-data h4, .single-post .post-data h5, .single-post .post-data h6 {
+        margin-bottom: 1rem;
+        padding-bottom: .5rem;
+        padding-top: .2rem;
+    }
+
+    .single-post .post-data ul, .single-post .post-data ol {
+        margin: .5rem;
+    }
+
+    .single-post .post-data ul ul, .single-post .post-data ol ol , .single-post .post-data ul ol , .single-post .post-data ol ul {
+        margin: .5rem 1rem;
+    }
+
+    .single-post .post-data li {
+        margin: .7rem 0;
+        line-height: 1.2;
+    }
+
+    .single-post .post-data h1 {
+        font-size: 1.9rem;
+    }
+
+    .single-post .post-data h2 {
+        font-size: 1.7rem;
+    }
+
+    .single-post .post-data h3 {
+        font-size: 1.5rem;
+    }
+
+    .single-post .post-data h4 {
+        font-size: 1.3rem;
+    }
+
+    .single-post .post-data h5 {
+        font-size: 1.2rem;
+    }
+
+    .single-post .post-data h6 {
+        font-size: 1.1rem;
+    }
+
+    .single-post .post-data blockquote {
+        line-height: 1.2;
+    }
+}

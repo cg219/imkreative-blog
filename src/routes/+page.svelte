@@ -53,4 +53,15 @@
         margin: 0;
         padding: 0;
     }
+
+    @media (max-width: 480px) {
+        .title {
+            font-size: 2.2rem;
+        }
+
+        .content {
+            grid-template-columns: 1fr minmax(300px, 80vw) 1fr;
+            grid-template-rows: 4rem auto;
+        }
+    }
 </style>

@@ -57,4 +57,7 @@
         color: var(--green);
     }
 
+    @media (max-width: 480px) {
+
+    }
 </style>

@@ -59,27 +59,12 @@
         grid-area: content;
         display: grid;
         grid-template-areas:
-            '. title .'
-            '. posts .';
-        grid-template-columns: 1fr minmax(450px, 50vw) 1fr;
-        grid-template-rows: 5rem auto;
-    }
-
-    .content {
-        display: grid;
-        grid-template-areas:
             'title'
             'metadata'
             'post';
         grid-template-columns: minmax(100px, 2fr);
         grid-template-rows: fit-content(50%) fit-content(1rem) auto;
         grid-row-gap: 2rem;
-    }
-
-    .title {
-        font-size: 2.8rem;
-        font-weight: bold;
-        grid-area: title;
     }
 
     .metadata {
@@ -115,4 +100,9 @@
         grid-area: post;
     }
 
+    @media (max-width: 480px) {
+        .title {
+            font-size: 2.2rem;
+        }
+    }
 </style>

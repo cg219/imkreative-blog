@@ -61,5 +61,26 @@
         height: 100%;
     }
 
+    @media (max-width: 480px) {
+        .post {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            grid-template-areas:
+                'date'
+                'title'
+                'excerpt';
+            grid-template-columns: 100%;
+            grid-template-rows: 1em auto auto;
+        }
+
+        .post h1 {
+            font-size: 1.3rem;
+        }
+
+        .post p {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+    }
 
 </style>
