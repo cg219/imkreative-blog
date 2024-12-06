@@ -1,0 +1,65 @@
+<script>
+    const { published_at, title, excerpt, slug } = $props()
+    const formatter = new Intl.DateTimeFormat('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric'
+    });
+
+    const date = new Date(published_at);
+</script>
+
+<div class="post">
+    <h1>{title}</h1>
+    <span>{formatter.format(date)}</span>
+    <p>{excerpt}</p>
+    <a href={`/read/${slug}`}></a>
+</div>
+
+<style>
+    .post {
+        border-top: 1px dotted #32323230;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: grid;
+        position: relative;
+        grid-template-areas:
+            'date title'
+            '. excerpt';
+        grid-template-columns: 25% 75%;
+        grid-template-rows: auto auto;
+        grid-gap: 1rem;
+        cursor: pointer;
+    }
+
+    .post h1 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        grid-area: title;
+        transition: all .2s ease-in-out;
+    }
+
+    .post:hover h1 {
+        color: var(--green);
+    }
+
+    .post p {
+        font-size: 1rem;
+        grid-area: excerpt;
+        line-height: 1.3;
+    }
+
+    .post span {
+        grid-area: date;
+        opacity: .8;
+        color: #454545;
+    }
+
+    .post a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+
+</style>
