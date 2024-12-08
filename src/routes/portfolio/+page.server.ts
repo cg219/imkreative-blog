@@ -8,6 +8,12 @@ const client = createClient({
 })
 
 export async function load() {
+    const API_URL = Deno.env.get("IMK_API_URL");
+    const API_KEY = Deno.env.get("IMK_API_KEY");
+    const settingsFetch = await fetch( `${API_URL}/ghost/api/content/settings/?key=${API_KEY}`);
+    const settingsData = await settingsFetch.json();
+    const settings = settingsData.settings;
+
     const projects = await client.fetch(`*[_type == 'site'] {
         date,
         active,
@@ -19,8 +25,6 @@ export async function load() {
         client,
         "thumbnail": thumbnail["asset"]-> {url}
     } | order(date desc)`)
-
-    console.log(projects)
     
-    return { projects }
+    return { projects, settings }
 }
