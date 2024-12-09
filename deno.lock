@@ -732,8 +732,19 @@
       "npm:@sveltejs/vite-plugin-svelte@5",
       "npm:svelte-check@4",
       "npm:svelte@5",
-      "npm:typescript@5",
       "npm:vite@6"
-    ]
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:@sanity/client@^6.24.1",
+        "npm:@sveltejs/adapter-node@^5.2.9",
+        "npm:@sveltejs/kit@^2.9.0",
+        "npm:@sveltejs/vite-plugin-svelte@5",
+        "npm:svelte-check@4",
+        "npm:svelte@5",
+        "npm:typescript@5",
+        "npm:vite@6"
+      ]
+    }
   }
 }
