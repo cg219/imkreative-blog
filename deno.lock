@@ -8,7 +8,8 @@
     "npm:svelte-check@4": "4.1.1_svelte@5.6.2__acorn@8.14.0_typescript@5.7.2",
     "npm:svelte@5": "5.6.2_acorn@8.14.0",
     "npm:typescript@5": "5.7.2",
-    "npm:vite@6": "6.0.2"
+    "npm:vite@6": "6.0.2",
+    "npm:vite@6.0.2": "6.0.2"
   },
   "npm": {
     "@ampproject/remapping@2.3.0": {
@@ -715,17 +716,15 @@
     }
   },
   "workspace": {
-    "packageJson": {
-      "dependencies": [
-        "npm:@sanity/client@^6.24.1",
-        "npm:@sveltejs/adapter-node@^5.2.9",
-        "npm:@sveltejs/kit@^2.9.0",
-        "npm:@sveltejs/vite-plugin-svelte@5",
-        "npm:svelte-check@4",
-        "npm:svelte@5",
-        "npm:typescript@5",
-        "npm:vite@6"
-      ]
-    }
+    "dependencies": [
+      "npm:@sanity/client@^6.24.1",
+      "npm:@sveltejs/adapter-node@^5.2.9",
+      "npm:@sveltejs/kit@^2.9.0",
+      "npm:@sveltejs/vite-plugin-svelte@5",
+      "npm:svelte-check@4",
+      "npm:svelte@5",
+      "npm:typescript@5",
+      "npm:vite@6"
+    ]
   }
 }
