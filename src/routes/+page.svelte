@@ -4,7 +4,6 @@
     import Post from "$lib/components/Post.svelte";
 
     let { data } = $props();
-    console.log(data.settings.navigation)
 </script>
 <Header urls={data.settings.navigation}></Header>
 <div class="content">
