@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"@sanity/client": "^6.24.1",
+		"@sveltejs/adapter-node": "^5.2.12",
 		"sveltekit-adapter-deno": "^0.16.1"
 	},
 	"devDependencies": {
