@@ -18,7 +18,7 @@
 
 <style>
     .post {
-        border-top: 1px dotted #32323230;
+        border-top: 1px dotted light-dark(#32323230, #32323230);
         padding-top: 2rem;
         padding-bottom: 2rem;
         display: grid;
@@ -40,19 +40,20 @@
     }
 
     .post:hover h1 {
-        color: var(--green);
+        color: light-dark(var(--green), var(--green));
     }
 
     .post p {
         font-size: 1rem;
         grid-area: excerpt;
         line-height: 1.3;
+        color: light-dark(var(--dark-font), var(--light-font));
     }
 
     .post span {
         grid-area: date;
         opacity: .8;
-        color: #454545;
+        color: light-dark(#454545, #ACACAC);
     }
 
     .post a {

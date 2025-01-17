@@ -32,6 +32,9 @@
 </svelte:head>
 
 <style>
+    :root {
+    }
+
     .title {
         font-size: 2.8rem;
         font-weight: bold;
@@ -52,6 +55,9 @@
         grid-area: posts;
         margin: 0;
         padding: 0;
+    }
+
+    .post {
     }
 
     @media (max-width: 480px) {

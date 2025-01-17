@@ -70,10 +70,10 @@
     .metadata {
         grid-area: metadata;
         opacity: .8;
-        color: #454545;
+        color: light-dark(var(--dark-alt-font), var(--light-alt-font));
         font-size: 1.2rem;
         padding-bottom: 1rem;
-        border-bottom: 1px dotted #32323230;
+        border-bottom: 1px dotted light-dark(var(--dark-border), var(--light-border));
         display: grid;
         grid-row-gap: .2em;
     }
@@ -93,7 +93,7 @@
     }
 
     .metadata span a:hover {
-        color: var(--green);
+        color: light-dark(var(--green), var(--green));
     }
 
     .post-data {

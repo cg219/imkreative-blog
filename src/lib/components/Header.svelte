@@ -1,10 +1,19 @@
 <script>
     import { base } from "$app/paths"
+    import { onMount } from "svelte"
     let { urls } = $props()
+    let darkmode = $state(false)
+
+    onMount(() => {
+        let colorscheme = window.matchMedia('(prefers-color-scheme: dark)')
+        darkmode = colorscheme.matches
+        colorscheme.addEventListener("change", (e) => darkmode = e.matches ? true : false)
+    })
+    
 </script>
 <header>
     <nav>
-        <div><a href="/"><img class="logo" src="{base}/logo.svg" alt="imkreative.com" /></a></div>
+        <div><a href="/"><img class="logo" src={darkmode ? `${base}/logo-light.svg` : `${base}/logo.svg`} alt="imkreative.com" /></a></div>
         <ul>
             {#each urls as {label, url}}
                 <li><a href={url}>{label}</a></li>
@@ -40,7 +49,7 @@
     header nav ul li {
         padding: .5rem;
         opacity: .8;
-        color: #454545;
+        color: light-dark(#454545, #ACACAC);
     }
 
     header nav ul li a {
@@ -50,7 +59,7 @@
     }
 
     header nav ul li:hover a {
-        color: var(--green);
+        color: light-dark(var(--green), var(--green));
     }
 
     @media (max-width: 480px) {

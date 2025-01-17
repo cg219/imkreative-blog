@@ -7,11 +7,11 @@
     line-height: 1.4;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    color: var(--dark-font)
+    color: light-dark(var(--dark-font), var(--light-font));
 }
 
 .single-post .post-data a {
-    color: var(--green);
+    color: light-dark(var(--green), var(--alt));
     transition: .2s opacity ease-out;
 }
 
@@ -42,7 +42,7 @@
 .single-post .post-data strong {
     font-weight: bold;
     font-size: larger;
-    color: black;
+    color: light-dark(black, white);
 }
 
 .single-post .post-data em {
@@ -52,9 +52,9 @@
 .single-post .post-data h1, .single-post .post-data h2, .single-post .post-data h3, .single-post .post-data h4, .single-post .post-data h5, .single-post .post-data h6 {
     margin-bottom: 1rem;
     margin-top: 1.6rem;
-    border-bottom: 1px dotted #32323230;
+    border-bottom: 1px dotted light-dark(var(--dark-border), var(--light-border));
     padding-bottom: .5rem;
-    color: var(--green);
+    color: light-dark(var(--green), var(--green));
 }
 
 .single-post .post-data ul, .single-post .post-data ol {
@@ -112,12 +112,12 @@
 }
 
 .single-post .post-data .kg-callout-card {
-    background: var(--alt);
+    background: light-dark(var(--alt), var(--alt-dark));
     display: flex; 
     justify-content: flex-start;
     padding: 2rem 0 2rem .5rem;
     margin: 1.5rem 0;
-    color: var(--dark-font);
+    color: light-dark(var(--dark-font), var(--light-font));
 }
 
 .single-post .post-data .kg-callout-card .kg-callout-emoji {
@@ -125,12 +125,12 @@
 }
 
 .single-post .post-data .kg-code-card figcaption {
-    background: var(--green);
+    background: light-dark(var(--green), var(--green));
     padding: .5rem 0 .4rem .5rem;
 }
 
 .single-post .post-data .kg-code-card figcaption p {
-    color: var(--light-font);
+    color: light-dark(var(--light-font), var(--dark-font));
     font-size: .85rem;
     margin: 0;
 }
@@ -140,7 +140,7 @@
     letter-spacing: .03rem;
     margin: 2rem 1rem;
     padding-left: 1rem;
-    border-left: .8rem solid var(--green);
+    border-left: .8rem solid light-dark(var(--green), var(--green));
 }
 
 @media (max-width: 480px) {
