@@ -8,15 +8,10 @@ const client = createClient({
 })
 
 export async function load() {
-    const API_URL = Deno.env.get("IMK_API_URL");
-    const API_KEY = Deno.env.get("IMK_API_KEY");
-    const kv = await Deno.openKv();
-    // const kv = await Deno.openKv("https://api.deno.com/databases/b410a3cf-acb8-4017-9008-8b12fddf1d4c/connect");
-    // const settingsFetch = await fetch( `${API_URL}/ghost/api/content/settings/?key=${API_KEY}`);
-    // const settingsData = await settingsFetch.json();
-    // const settings = settingsData.settings;
-    const settingsRes = await kv.get(["settings"])
-    const settings = settingsRes.value
+    const dataUrl = Deno.env.get("IMK_API_URL");
+    const settingsRes = await fetch(`${dataUrl}/settings`)
+    const settingsData = await settingsRes.json()
+    const settings = settingsData.settings
     const projects = await client.fetch(`*[_type == 'site'] {
         date,
         active,
